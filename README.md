@@ -35,6 +35,9 @@ set foldmethod=syntax
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+
+# command-t start current directory
+let g:CommandTTraverseSCM='pwd'
 ```
 
 ## Frequently used commands in plugin
