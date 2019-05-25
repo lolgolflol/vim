@@ -1,5 +1,5 @@
 # vim
-Vim plugin ที่ควรลง และ set .vimc
+Vim plugin ที่ควรลง และ set .vimc withy https://github.com/tpope/vim-pathogen
 
 ## Plugin
 
