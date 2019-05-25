@@ -24,8 +24,8 @@ filetype plugin indent on
 set number
 # <leader> is to press \ button by default
 # <leader>ne is to press \ follow by n and e respectively.
-nmap <leader>ne :NERDTree<cr>
-nmap <leader>nf :NERDTreeFocus<cr>
+nmap <leader>ne :NERDTreeFocus<cr>
+nmap <leader>nf :NERDTreeFind<CR>
 
 # <C-n> is ctrl + n
 map <silent> <C-n> :NERDTreeToggle<CR>
