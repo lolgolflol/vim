@@ -87,7 +87,7 @@ zk — cursor is moved to previous fold
 ## Search text in folder
 ```bash
 :grep -F <what word you want to search> ./**/*
-# you will see (Press ENTER or type command to continue) typing the command below.
+# you will see (Press ENTER or type command to continue), to type the command below.
 :copen # for open explorer files matching.
 :cclose # for close console.
 ```
