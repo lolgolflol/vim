@@ -14,6 +14,7 @@ vim-jsx                               # jsx react
 quickr-preview.vim                    # comment-t open preview
 vim-javascript                        # syntax javascript
 vim-prettier                          # format code after save
+ale                                   # tag alert unused variable
 ```
 
 
