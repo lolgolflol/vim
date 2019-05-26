@@ -4,15 +4,16 @@ Vim plugin ที่ควรลง และ set .vimc withy https://github.com
 ## Plugin
 
 ```bash
-# auto complete function
-AutoComplPop
-YouCompleteMe
-# to search find quickly
-command-t
-# command code
-nerdcommenter
-# explorer files
-nerdtree
+AutoComplPop                          # auto complete function
+YouCompleteMe                         # auto complete function
+command-t                             # to search find quickly
+nerdcommenter                         # command code
+nerdtree                              # explorer files
+vim-go                                # golang
+vim-jsx                               # jsx react
+quickr-preview.vim                    # comment-t open preview
+vim-javascript                        # syntax javascript
+vim-prettier                          # format code after save
 ```
 
 
@@ -20,24 +21,35 @@ nerdtree
 ```bash
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
 set number
-# <leader> is to press \ button by default
-# <leader>ne is to press \ follow by n and e respectively.
+filetype plugin indent on
+
+" <leader> is to press \ button by default
+" <leader>ne is to press \ follow by n and e respectively.
 nmap <leader>ne :NERDTreeFocus<cr>
 nmap <leader>nf :NERDTreeFind<CR>
-
-# <C-n> is ctrl + n
 map <silent> <C-n> :NERDTreeToggle<CR>
 
-# fold code ex. function block (bracket,def block)
-set foldmethod=syntax
+" fold code ex. function block (bracket,def block)
+set foldmethod=manual
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-# command-t start current directory
+" command-t start search current directory
 let g:CommandTTraverseSCM='pwd'
+
+
+" javascript auto format after save (Prettier)
+autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
+
+" doing on the fly to arrange tab new line
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+
+" quick search in file by selected word
+vnoremap // y/<C-R>"<CR>
 ```
 
 ## Frequently used commands in plugin
