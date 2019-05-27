@@ -8,11 +8,7 @@ YouCompleteMe                         # auto complete function
 command-t or ctrlp.vim                # to search find quickly
 nerdcommenter                         # command code
 nerdtree                              # explorer files
-vim-go                                # golang
-vim-jsx                               # jsx react
 quickr-preview.vim                    # comment-t open preview
-vim-javascript                        # syntax javascript
-vim-prettier                          # format code after save
 ale                                   # tag alert unused variable
 ```
 
