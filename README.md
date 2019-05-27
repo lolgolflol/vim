@@ -30,26 +30,28 @@ nmap <leader>ne :NERDTreeFocus<cr>
 nmap <leader>nf :NERDTreeFind<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 
-" fold code ex. function block (bracket,def block)
-set foldmethod=manual
-set foldnestmax=10
-set nofoldenable
-set foldlevel=2
-
 " command-t start search current directory
 let g:CommandTTraverseSCM='pwd'
-
-
-" javascript auto format after save (Prettier)
-autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
-
-" doing on the fly to arrange tab new line
-autocmd FileType html setlocal ts=2 sts=2 sw=2
-autocmd FileType ruby setlocal ts=2 sts=2 sw=2
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+" ale config auto fixing javascript use prettier, eslint respectively
+let g:ale_fixers = {'javascript' : ['prettier', 'eslint']}
+let g:ale_fix_on_save = 1
 
 " quick search in file by selected word
 vnoremap // y/<C-R>"<CR>
+
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
+
+" auto close [Scratch] [Preview]  after autocompletion
+autocmd CompleteDone * pclose
+
+" doing on the fly to arrange tab new line
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 ```
 
 ## Frequently used commands in plugin
