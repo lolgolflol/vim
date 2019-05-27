@@ -5,7 +5,7 @@ Vim plugin ที่ควรลง และ set .vimc withy https://github.com
 
 ```bash
 YouCompleteMe                         # auto complete function
-command-t                             # to search find quickly
+command-t or ctrlp.vim                # to search find quickly
 nerdcommenter                         # command code
 nerdtree                              # explorer files
 vim-go                                # golang
