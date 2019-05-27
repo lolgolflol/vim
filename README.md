@@ -4,7 +4,6 @@ Vim plugin ที่ควรลง และ set .vimc withy https://github.com
 ## Plugin
 
 ```bash
-AutoComplPop                          # auto complete function
 YouCompleteMe                         # auto complete function
 command-t                             # to search find quickly
 nerdcommenter                         # command code
