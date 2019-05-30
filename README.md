@@ -4,6 +4,12 @@ Vim plugin ที่ควรลง และ set .vimc withy https://github.com
 ## Plugin
 
 ```bash
+MatchTagAlways                        # match tag alway
+vim-javascript                        # syntax javascript
+vim-prettier                          # systax prettier
+auto-pairs                            # 
+vim-closetag                          #
+vim-jsx                               #
 YouCompleteMe                         # auto complete function
 command-t or ctrlp.vim                # to search find quickly
 nerdcommenter                         # command code
