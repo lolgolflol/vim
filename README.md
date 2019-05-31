@@ -26,6 +26,10 @@ syntax on
 set number
 filetype plugin indent on
 
+" highlight search
+set hlsearch
+:nnoremap <CR> :nohlsearch<CR><CR>
+
 " <leader> is to press \ button by default
 " <leader>ne is to press \ follow by n and e respectively.
 nmap <leader>ne :NERDTreeFocus<cr>
@@ -34,9 +38,13 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 
 " command-t start search current directory
 let g:CommandTTraverseSCM='pwd'
+
 " ale config auto fixing javascript use prettier, eslint respectively
-let g:ale_fixers = {'javascript' : ['prettier', 'eslint']}
+let g:ale_linters = {'python':['flake8', 'pylint']}
+let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'*':['remove_trailing_lines','trim_whitespace']}
 let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+nmap <leader>ff :ALEFix<CR>
 
 " quick search in file by selected word
 vnoremap // y/<C-R>"<CR>
@@ -54,6 +62,28 @@ autocmd CompleteDone * pclose
 
 " doing on the fly to arrange tab new line
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Fold tag html, jsx
+map <leader>c Vatzf
+
+" syntactic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+" matchTagAlways
+let g:mta_filetypes = { 'javascript.jsx': 1, 'html' : 1, 'xhtml' : 1, 'xml' : 1,'jinja' : 1}
+
+" vim-closetag
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
+
 ```
 
 ## Frequently used commands in plugin
