@@ -34,6 +34,7 @@ set hlsearch
 " <leader>ne is to press \ follow by n and e respectively.
 nmap <leader>ne :NERDTreeFocus<cr>
 nmap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>w <C-w>
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " command-t start search current directory
