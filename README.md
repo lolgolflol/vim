@@ -28,13 +28,14 @@ filetype plugin indent on
 
 " highlight search
 set hlsearch
-:nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <CR> :nohlsearch<CR><CR>
 
 " <leader> is to press \ button by default
 " <leader>ne is to press \ follow by n and e respectively.
 nmap <leader>ne :NERDTreeFocus<cr>
 nmap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>w <C-w>
+nnoremap <leader>nw <C-w>
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " command-t start search current directory
@@ -49,6 +50,7 @@ nmap <leader>ff :ALEFix<CR>
 
 " quick search in file by selected word
 vnoremap // y/<C-R>"<CR>
+vnoremap <leader>s  y:%s/<C-R>"//gc<left><left><left>
 
 " yank to clipboard
 if has("clipboard")
@@ -84,6 +86,7 @@ let g:mta_filetypes = { 'javascript.jsx': 1, 'html' : 1, 'xhtml' : 1, 'xml' : 1,
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
+
 
 
 ```
