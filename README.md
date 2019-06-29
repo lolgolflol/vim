@@ -16,6 +16,7 @@ nerdcommenter                         # command code
 nerdtree                              # explorer files
 quickr-preview.vim                    # comment-t open preview
 ale                                   # tag alert unused variable
+ag.vim                                # quick search
 ```
 
 
@@ -38,6 +39,10 @@ nnoremap <leader>w <C-w>
 nnoremap <leader>nw <C-w>
 map <silent> <C-n> :NERDTreeToggle<CR>
 
+" search file
+nmap <C-f> /\c<left><left>
+" search all directory
+vnoremap <leader>df y:Ag -i <C-R>" ./
 " command-t start search current directory
 let g:CommandTTraverseSCM='pwd'
 
@@ -49,7 +54,7 @@ let g:ale_completion_enabled = 1
 nmap <leader>ff :ALEFix<CR>
 
 " quick search in file by selected word
-vnoremap // y/<C-R>"<CR>
+vnoremap // y/<C-R>"\c<CR>
 vnoremap <leader>s  y:%s/<C-R>"//gc<left><left><left>
 
 " yank to clipboard
@@ -86,6 +91,21 @@ let g:mta_filetypes = { 'javascript.jsx': 1, 'html' : 1, 'xhtml' : 1, 'xml' : 1,
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
+
+set runtimepath^=~/.vim/bundle/ag
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+
 
 
 
