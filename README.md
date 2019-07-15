@@ -25,7 +25,9 @@ ag.vim                                # quick search
 execute pathogen#infect()
 syntax on
 set number
+
 filetype plugin indent on
+filetype plugin on
 
 " highlight search
 set hlsearch
@@ -40,6 +42,7 @@ nnoremap <leader>nw <C-w>
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " search file
+nmap <leader>s /\c<left><left>
 nmap <C-f> /\c<left><left>
 " search all directory
 vnoremap <leader>df y:Ag -i <C-R>" ./
@@ -48,7 +51,7 @@ let g:CommandTTraverseSCM='pwd'
 
 " ale config auto fixing javascript use prettier, eslint respectively
 let g:ale_linters = {'python':['flake8', 'pylint']}
-let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'*':['remove_trailing_lines','trim_whitespace'],'json':['fixjson']}
+let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'*':['remove_trailing_lines','trim_whitespace'],'json':['fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier']}
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 nmap <leader>ff :ALEFix<CR>
@@ -70,6 +73,9 @@ autocmd CompleteDone * pclose
 
 " doing on the fly to arrange tab new line
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2
+autocmd FileType go setlocal ts=2 sts=2 sw=2
+
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -104,8 +110,6 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-
 
 
 
