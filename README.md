@@ -20,7 +20,7 @@ ag.vim                                # quick search
 ```
 
 
-## .vimc
+## .vimrc
 ```bash
 execute pathogen#infect()
 syntax on
