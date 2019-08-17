@@ -39,6 +39,7 @@ nmap <leader>ne :NERDTreeFocus<cr>
 nmap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>nw <C-w>
+nnoremap <leader>gd :GoDoc<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " search file
@@ -54,6 +55,7 @@ let g:ale_linters = {'python':['flake8', 'pylint']}
 let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'*':['remove_trailing_lines','trim_whitespace'],'json':['fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier']}
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
+let g:ale_python_flake8_executable = 'python3'
 nmap <leader>ff :ALEFix<CR>
 
 " quick search in file by selected word
