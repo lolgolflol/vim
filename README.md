@@ -5,18 +5,20 @@ Vim plugin ที่ควรลง และ set .vimc withy https://github.com
 
 ```bash
 MatchTagAlways                        # match tag alway
-vim-javascript                        # syntax javascript
-vim-prettier                          # systax prettier
-auto-pairs                            # 
-vim-closetag                          #
-vim-jsx                               #
 YouCompleteMe                         # auto complete function
+ag.vim                                # quick search
+ale                                   # tag alert unused variable
+auto-pairs                            # 
 command-t or ctrlp.vim                # to search find quickly
 nerdcommenter                         # command code
 nerdtree                              # explorer files
 quickr-preview.vim                    # comment-t open preview
-ale                                   # tag alert unused variable
-ag.vim                                # quick search
+vim-closetag                          #
+vim-go                                #
+vim-gocode                            #
+vim-javascript                        # syntax javascript
+vim-jsx                               #
+vim-prettier                          # systax prettier
 ```
 
 
