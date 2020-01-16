@@ -19,6 +19,7 @@ vim-gocode                            #
 vim-javascript                        # syntax javascript
 vim-jsx                               #
 vim-prettier                          # systax prettier
+Ack.vim                               # search text in directory
 ```
 
 
