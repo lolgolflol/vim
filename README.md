@@ -26,6 +26,7 @@ Ack.vim                               # search text in directory
 ## .vimrc
 ```bash
 execute pathogen#infect()
+call pathogen#helptags()
 syntax on
 set number
 
