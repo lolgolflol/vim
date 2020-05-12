@@ -1,6 +1,9 @@
 # vim
 Vim plugin ที่ควรลง และ set .vimc withy https://github.com/tpope/vim-pathogen
 
+# Manual install vim version
+https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source
+
 ## Plugin
 
 ```bash
