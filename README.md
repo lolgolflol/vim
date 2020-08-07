@@ -29,6 +29,15 @@ vim-prettier
 vim-terraform
 ```
 
+### command-t
+```
+check version ruby support current vim
+:ruby puts RUBY_VERSION
+use ruby version which build vim, it should check /usr/local/opt/ruby/bin/ruby -v  which it should be the same :ruby puts RUBY_VERSION 
+cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
+/usr/local/opt/ruby/bin/ruby extconf.rb
+  make
+```
 
 ## .vimrc
 ```bash
