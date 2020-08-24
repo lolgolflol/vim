@@ -21,7 +21,9 @@ nmap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>nw <C-w>
 nnoremap <leader>gd :GoDoc<CR>
+nnoremap * *``
 map <silent> <C-n> :NERDTreeToggle<CR>
+map <silent> tt :term bash --login<CR>
 
 " search file
 nmap <leader>s /\c<left><left>
@@ -36,7 +38,7 @@ let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 nmap <leader>ff :ALEFix<CR>
 let g:ale_linters = {'python':['flake8', 'pylint']}
-let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'*':['remove_trailing_lines','trim_whitespace'],'json':['fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier']}
+let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'*':['prettier','remove_trailing_lines','trim_whitespace'],'json':['prettier','fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier']}
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
