@@ -2,6 +2,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 syntax on
 set number
+set rnu
 filetype plugin indent on
 " space
 set smartindent
@@ -38,7 +39,7 @@ let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 nmap <leader>ff :ALEFix<CR>
 let g:ale_linters = {'python':['flake8', 'pylint']}
-let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'*':['prettier','remove_trailing_lines','trim_whitespace'],'json':['prettier','fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier']}
+let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'json':['prettier','fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier'],'*':['prettier','remove_trailing_lines','trim_whitespace']}
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
