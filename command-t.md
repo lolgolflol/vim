@@ -26,3 +26,10 @@
 \ <space>   open the selected file in preview window
 
 ```
+
+#How to solve Commond-T is not compatible ruby version
+
+Step 1. check version ruby in vim use (vim --version)
+Step 2. check default version ruby in terminal (ruby -v)
+Step 3. check how you install vim in your notebook (such as brew, manaul)
+Step 4. change your default version ruby to version ruby on vim and install command-t where "ruby .vim/bundle/command-t/ruby/command-t/ext/command-t/extconf.rb" and make
