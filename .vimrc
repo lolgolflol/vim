@@ -11,9 +11,12 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" Command - T Ignore directory
+set wildignore+=node_modules
+
 " highlight search
 set hlsearch
-nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <CR> :nohlsearch<CR>:match<CR><CR>
 
 " <leader> is to press \ button by default
 " <leader>ne is to press \ follow by n and e respectively.
@@ -22,7 +25,7 @@ nmap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>nw <C-w>
 nnoremap <leader>gd :GoDoc<CR>
-nnoremap * *``
+nnoremap <leader>h :match StatusLineTerm /<C-R><C-W>/<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <silent> tt :term bash --login<CR>
 
@@ -30,7 +33,7 @@ map <silent> tt :term bash --login<CR>
 nmap <leader>s /\c<left><left>
 nmap <C-f> /\c<left><left>
 " search and replace
-vnoremap // y/<C-R>"\c<CR>
+vnoremap // y/<C-R>"\c<CR>N
 vnoremap <leader>s  y:%s/<C-R>"//gc<left><left><left>
 
 
@@ -40,6 +43,7 @@ let g:ale_fix_on_save = 1
 nmap <leader>ff :ALEFix<CR>
 let g:ale_linters = {'python':['flake8', 'pylint']}
 let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'json':['prettier','fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier'],'*':['prettier','remove_trailing_lines','trim_whitespace']}
+
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
