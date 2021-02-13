@@ -13,6 +13,8 @@ set shiftwidth=4
 
 " Command - T Ignore directory
 set wildignore+=node_modules
+let g:CommandTTraverseSCM='pwd'
+
 
 " highlight search
 set hlsearch
