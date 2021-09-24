@@ -29,7 +29,7 @@ nnoremap <leader>nw <C-w>
 nnoremap <leader>gd :GoDoc<CR>
 nnoremap <leader>h :match StatusLineTerm /<C-R><C-W>/<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
-map <silent> tt :term bash --login<CR>
+" map <silent> tt :term bash --login<CR>
 
 " search file
 nmap <leader>s /\c<left><left>
@@ -59,5 +59,5 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " copy clipbaord
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
-nnoremap <C-p> "+gP
+nnoremap <C-p> "+gp
 vnoremap <C-p> "+gP
