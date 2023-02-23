@@ -29,6 +29,7 @@ nnoremap <leader>nw <C-w>
 nnoremap <leader>gd :GoDoc<CR>
 nnoremap <leader>h :match StatusLineTerm /<C-R><C-W>/<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
+let NERDTreeAutoChangeDir=0
 " map <silent> tt :term bash --login<CR>
 
 " search file
