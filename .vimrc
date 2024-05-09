@@ -44,8 +44,8 @@ vnoremap <leader>s  y:%s/<C-R>"//gc<left><left><left>
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 nmap <leader>ff :ALEFix<CR>
-let g:ale_linters = {'python':['flake8', 'pylint']}
-let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'json':['prettier','fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier'],'*':['prettier','remove_trailing_lines','trim_whitespace']}
+let g:ale_linters = {'python':['flake8', 'pylint'], 'go':['gofmt'],'typescript':['eslint']}
+let g:ale_fixers = {'javascript' : ['prettier', 'eslint'], 'python':['autopep8','isort','yapf'],'json':['prettier','fixjson'],'go':['gofmt','goimports'],'yaml':['prettier'], 'yml':['prettier'],'typescript':['eslint'],'*':['prettier','remove_trailing_lines','trim_whitespace']}
 
 
 " vim-closetag
@@ -62,3 +62,6 @@ nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gp
 vnoremap <C-p> "+gP
+
+
+set shell=/bin/bash
